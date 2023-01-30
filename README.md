@@ -12,7 +12,7 @@ pip install -U git+https://github.com/shirayu/rm_anime_bg.git@v0.0.0
 ## Usage
 
 ```bash
-rm_anime_bg -o /path/to/output_dir --matted /path/to/output_dir_matted  input1.png input2.png
+rm_anime_bg -o /path/to/output_dir --matted /path/to/output_dir_matted input1.png input2.png
 ```
 
 ## Links

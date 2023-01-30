@@ -1,0 +1,48 @@
+---
+name: CI
+on:  # yamllint disable-line rule:truthy
+  push:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+
+jobs:
+  ci:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        python-version: ["3.8", "3.9", "3.10"]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Get tags
+        run: git fetch --tags origin -f
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install Poetry Action
+        uses: snok/install-poetry@v1.3.3
+        with:
+          virtualenvs-create: true
+          virtualenvs-in-project: true
+
+      - name: Load cached venv
+        id: cached-poetry-dependencies
+        uses: actions/cache@v3
+        with:
+          path: .venv
+          key: venv-${{ runner.os }}-${{ matrix.python-version }}-${{ hashFiles('**/poetry.lock') }}-${{ hashFiles('**/package-lock.json') }}-2
+
+      - run: pip install poetry
+      - run: poetry install
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          cache: npm
+      - run: npm install
+      - run: poetry run make -j $(nproc)
