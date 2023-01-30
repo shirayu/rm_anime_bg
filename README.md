@@ -23,7 +23,7 @@ pip install -U git+https://github.com/shirayu/rm_anime_bg.git@v0.1.1
 ## Usage
 
 ```bash
-rm_anime_bg -o [Output directory] [Input 1] [Input 2]
+rm_anime_bg -o [Output directory] [Input 1] [Input 2] [Input 3] ... [Input N]
 ```
 
 Run ``rm_anime_bg --help`` for full command options
