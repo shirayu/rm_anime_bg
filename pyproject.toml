@@ -1,9 +1,9 @@
 [misc]
-stable_version = "0.0.0"
+stable_version = "0.1.0"
 
 [tool.poetry]
 name = "rm_anime_bg"
-version = "0.0.0"
+version = "0.1.0"
 description = ""
 authors = ["Yuta Hayashibe <yuta@hayashibe.jp>"]
 readme = "README.md"
