@@ -37,6 +37,7 @@ rm_anime_bg -o /path/to/output_dir input1.png input2.png
 ## Links
 
 - <https://github.com/SkyTNT/anime-segmentation>
+- Another image background remover: [rembg](https://github.com/danielgatis/rembg)
 
 ## License
 
