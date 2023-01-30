@@ -49,6 +49,7 @@ def save_image(
     img,
     output_dir: Path,
     path_original: Path,
+    out_format,
 ):
     if path_original.parent == output_dir:
         raise FileExistsError(
@@ -58,15 +59,13 @@ def save_image(
         exist_ok=True,
         parents=True,
     )
-    out_path: Path = output_dir.joinpath(path_original.name)
+    out_path: Path = output_dir.joinpath(path_original.stem + ".png")
     idx: int = 0
     while out_path.exists():
-        out_path = output_dir.joinpath(
-            f"{path_original.stem}.{idx}{path_original.suffix}"
-        )
+        out_path = output_dir.joinpath(f"{path_original.stem}.{idx}.png")
         idx += 1
 
-    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+    img = cv2.cvtColor(img, out_format)
     cv2.imwrite(str(out_path), img)
 
 
@@ -77,6 +76,8 @@ def operation(
     targets: List[str],
     output_matted: Optional[Path],
     output_dir: Optional[Path],
+    alpha_min: float,
+    alpha_max: float,
 ) -> None:
     if output_matted is None and output_dir is None:
         raise ValueError("No output directory names are given")
@@ -97,6 +98,9 @@ def operation(
         img = cv2.cvtColor(cv2.imread(path, cv2.IMREAD_COLOR), cv2.COLOR_BGR2RGB)
         mask = get_mask(session_infer, img)
 
+        mask[mask < alpha_min] = 0.0
+        mask[mask > alpha_max] = 1.0
+
         img_after = (mask * img + SCALE * (1 - mask)).astype(np.uint8)
         mask = (mask * SCALE).astype(np.uint8)
         img_after = np.concatenate([img_after, mask], axis=2, dtype=np.uint8)
@@ -107,6 +111,7 @@ def operation(
                 img=img_after,
                 output_dir=output_dir,
                 path_original=Path(path),
+                out_format=cv2.COLOR_BGRA2RGBA,
             )
 
         if output_matted:
@@ -114,6 +119,7 @@ def operation(
                 img=mask,
                 output_dir=output_matted,
                 path_original=Path(path),
+                out_format=cv2.COLOR_BGR2RGB,
             )
 
 
@@ -136,7 +142,16 @@ def get_opts():
         "--matted",
         type=Path,
     )
-
+    oparser.add_argument(
+        "--alpha-min",
+        type=float,
+        default=0.0,
+    )
+    oparser.add_argument(
+        "--alpha-max",
+        type=float,
+        default=1.0,
+    )
     return oparser.parse_known_args()
 
 
@@ -148,6 +163,8 @@ def main() -> None:
         targets=targets,
         output_dir=opts.output,
         output_matted=opts.matted,
+        alpha_min=opts.alpha_min,
+        alpha_max=opts.alpha_max,
     )
 
 
