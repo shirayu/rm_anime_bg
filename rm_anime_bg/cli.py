@@ -59,6 +59,12 @@ def save_image(
         parents=True,
     )
     out_path: Path = output_dir.joinpath(path_original.name)
+    idx: int = 0
+    while out_path.exists():
+        out_path = output_dir.joinpath(
+            f"{path_original.stem}.{idx}{path_original.suffix}"
+        )
+        idx += 1
 
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     cv2.imwrite(str(out_path), img)
