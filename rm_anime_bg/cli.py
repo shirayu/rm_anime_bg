@@ -52,7 +52,7 @@ def save_image(
 ):
     if path_original.parent == output_dir:
         raise FileExistsError(
-            f"Output directory shuold not be the same directory of the input image: {output_dir}"
+            f"Output directory should not be the same directory of the input image: {output_dir}"
         )
     output_dir.mkdir(
         exist_ok=True,
