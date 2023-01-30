@@ -9,6 +9,11 @@
 
 A simple CLI of anime background remover with [SkyTNT/anime-segmentation](https://github.com/SkyTNT/anime-segmentation)
 
+![An example of input image](example/example_0_original.png)
+![An example of output image](example/example_0_after.png)
+
+[Image source](https://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Wikipe-tan_meets_mathematics.png), licensed under CC-BY-SA-3.0, Funa Funa
+
 ## Setup
 
 ```bash
