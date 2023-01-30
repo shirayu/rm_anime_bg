@@ -2,7 +2,7 @@
 
 import argparse
 from pathlib import Path
-from typing import Optional
+from typing import List, Optional
 
 import cv2
 import numpy as np
@@ -68,7 +68,7 @@ def operation(
     *,
     model_repo_id: str,
     model_filename: str,
-    targets: list[str],
+    targets: List[str],
     output_matted: Optional[Path],
     output_dir: Optional[Path],
 ) -> None:
