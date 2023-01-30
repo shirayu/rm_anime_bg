@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "rm_anime_bg"
+version = "0.1.0"
+description = ""
+authors = ["Yuta Hayashibe <yuta@hayashibe.jp>"]
+readme = "README.md"
+packages = [{include = "rm_anime_bg"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+opencv-python = "^4.7.0.68"
+huggingface-hub = "^0.12.0"
+numpy = "^1.24.1"
+onnxruntime = "^1.13.1"
+torch = "^1.13.1"
+pillow = "^9.4.0"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^22.12.0"
+isort = "^5.12.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+rm_anime_bg = "rm_anime_bg.cli:main"
