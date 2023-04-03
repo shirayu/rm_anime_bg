@@ -19,7 +19,7 @@ onnxruntime = "^1.14.1"
 torch = "^2.0.0"
 
 [tool.poetry.group.dev.dependencies]
-black = "^22.12.0"
+black = "^23.3.0"
 isort = "^5.12.0"
 toml = "^0.10.2"
 flake8 = ">=5.0.4"
