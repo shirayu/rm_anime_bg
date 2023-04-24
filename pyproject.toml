@@ -14,7 +14,7 @@ packages = [{include = "rm_anime_bg"}]
 python = ">=3.9,<3.11"
 opencv-python = "^4.7.0.72"
 huggingface-hub = "^0.12.1"
-numpy = "^1.24.2"
+numpy = "^1.24.3"
 onnxruntime = "^1.14.1"
 torch = "^2.0.0"
 
