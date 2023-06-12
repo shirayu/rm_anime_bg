@@ -17,7 +17,7 @@ A simple CLI of anime background remover with [SkyTNT/anime-segmentation](https:
 ## Setup
 
 ```bash
-pip install -U git+https://github.com/shirayu/rm_anime_bg.git@v0.1.1
+pip install -U git+https://github.com/shirayu/rm_anime_bg.git@v0.1.2
 ```
 
 ## Usage
