@@ -20,10 +20,7 @@ yamllint:
 	find . \( -name node_modules -o -name .venv \) -prune -o -type f -name '*.yml' -print \
 		| xargs yamllint --no-warnings
 
-version_check:
-	 git tag | python ./scripts/check_version.py --toml pyproject.toml -i README.md --tags -
-
-lint_python: flake8 black isort pydocstyle version_check pytest
+lint_python: flake8 black isort pydocstyle pytest
 
 
 pyright:
