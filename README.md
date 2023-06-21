@@ -1,8 +1,11 @@
 
 # rm_anime_bg
 
+[![PyPI version](https://badge.fury.io/py/rm_anime_bg.svg)](https://badge.fury.io/py/rm_anime_bg)
+[![Python Versions](https://img.shields.io/pypi/pyversions/rm_anime_bg.svg)](https://pypi.org/project/rm_anime_bg/)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-![Python Versions](https://img.shields.io/badge/python-3.9%20%7C%203.10-blue)
+[![Downloads](https://pepy.tech/badge/rm_anime_bg/week)](https://pepy.tech/project/rm_anime_bg)
+
 [![CI](https://github.com/shirayu/rm_anime_bg/actions/workflows/ci.yml/badge.svg)](https://github.com/shirayu/rm_anime_bg/actions/workflows/ci.yml)
 [![CodeQL](https://github.com/shirayu/rm_anime_bg/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/shirayu/rm_anime_bg/actions/workflows/codeql-analysis.yml)
 [![Typos](https://github.com/shirayu/rm_anime_bg/actions/workflows/typos.yml/badge.svg)](https://github.com/shirayu/rm_anime_bg/actions/workflows/typos.yml)
@@ -17,7 +20,11 @@ A simple CLI of anime background remover with [SkyTNT/anime-segmentation](https:
 ## Setup
 
 ```bash
-pip install -U git+https://github.com/shirayu/rm_anime_bg.git@v0.1.2
+# For CPU
+pip install -U 'rm_anime_bg[cpu]'
+
+# For GPU
+pip install -U 'rm_anime_bg[gpu]'
 ```
 
 ## Usage
