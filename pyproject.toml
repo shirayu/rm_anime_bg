@@ -16,8 +16,13 @@ python = ">=3.9,<3.11"
 opencv-python = ">=4.7.0.72"
 huggingface-hub = ">=0.14.1"
 numpy = ">=1.24.2"
-onnxruntime = ">=1.14.1"
 torch = "^2.0.1"
+onnxruntime = { version = "^1.15.1", optional = true }
+onnxruntime-gpu = { version = "^1.15.1", optional = true }
+
+[tool.poetry.extras]
+cpu = ["onnxruntime"]
+gpu = ["onnxruntime-gpu"]
 
 [tool.poetry.group.dev.dependencies]
 black = "^22.12.0"
