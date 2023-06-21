@@ -78,6 +78,7 @@ def operation(
     output_dir: Optional[Path],
     alpha_min: float,
     alpha_max: float,
+    force_cpu: bool,
 ) -> None:
     if output_matted is None and output_dir is None:
         raise ValueError("No output directory names are given")
@@ -86,12 +87,14 @@ def operation(
         repo_id=model_repo_id,
         filename=model_filename,
     )
+
+    providers: list[str] = ["CPUExecutionProvider"]
+    if not force_cpu and "CUDAExecutionProvider" in rt.get_available_providers():
+        providers = ["CUDAExecutionProvider"]
+
     session_infer = rt.InferenceSession(
         session_infer_path,
-        providers=[
-            "CUDAExecutionProvider",
-            "CPUExecutionProvider",
-        ],
+        providers=providers,
     )
 
     for path in targets:
@@ -152,6 +155,11 @@ def get_opts():
         type=float,
         default=1.0,
     )
+    oparser.add_argument(
+        "--cpu",
+        action="store_true",
+        help="Force to use CPU",
+    )
     return oparser.parse_known_args()
 
 
@@ -165,6 +173,7 @@ def main() -> None:
         output_matted=opts.matted,
         alpha_min=opts.alpha_min,
         alpha_max=opts.alpha_max,
+        force_cpu=opts.cpu,
     )
 
 

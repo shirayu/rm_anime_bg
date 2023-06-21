@@ -33,6 +33,8 @@ pip install -U 'rm_anime_bg[gpu]'
 rm_anime_bg -o [Output directory] [Input 1] [Input 2] [Input 3] ... [Input N]
 ```
 
+- ``--cpu``: Force use of CPU
+
 Run ``rm_anime_bg --help`` to check full command options
 
 ### Example
