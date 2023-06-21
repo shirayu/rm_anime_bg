@@ -1,9 +1,7 @@
-[misc]
-stable_version = "0.1.3"
 
 [tool.poetry]
 name = "rm_anime_bg"
-version = "0.1.2"
+version = "0.2.0"
 description = ""
 license = "Apache-2.0"
 authors = ["Yuta Hayashibe <yuta@hayashibe.jp>"]
