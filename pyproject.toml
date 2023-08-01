@@ -23,7 +23,7 @@ cpu = ["onnxruntime"]
 gpu = ["onnxruntime-gpu"]
 
 [tool.poetry.group.dev.dependencies]
-black = "^22.12.0"
+black = ">=22.12,<24.0"
 isort = "^5.12.0"
 toml = "^0.10.2"
 flake8 = ">=5.0.4"
