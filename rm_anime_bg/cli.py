@@ -101,11 +101,11 @@ def operation(
         img = cv2.cvtColor(cv2.imread(path, cv2.IMREAD_COLOR), cv2.COLOR_BGR2RGB)
         mask = get_mask(session_infer, img)
 
-        mask[mask < alpha_min] = 0.0
-        mask[mask > alpha_max] = 1.0
+        mask[mask < alpha_min] = 0.0  # type: ignore
+        mask[mask > alpha_max] = 1.0  # type: ignore
 
-        img_after = (mask * img + SCALE * (1 - mask)).astype(np.uint8)
-        mask = (mask * SCALE).astype(np.uint8)
+        img_after = (mask * img + SCALE * (1 - mask)).astype(np.uint8)  # type: ignore
+        mask = (mask * SCALE).astype(np.uint8)  # type: ignore
         img_after = np.concatenate([img_after, mask], axis=2, dtype=np.uint8)
         mask = mask.repeat(3, axis=2)
 
