@@ -9,8 +9,8 @@ devDependencies:
     specifier: ^0.35.0
     version: 0.35.0
   pyright:
-    specifier: ^1.1.305
-    version: 1.1.305
+    specifier: ^1.1.329
+    version: 1.1.329
 
 packages:
 
@@ -124,6 +124,14 @@ packages:
       signal-exit: 4.1.0
     dev: true
 
+  /fsevents@2.3.3:
+    resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
+    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
   /get-stdin@9.0.0:
     resolution: {integrity: sha512-dVKBjfWisLAicarI2Sf+JuBE/DghV4UzNAVe9yhEJuzeREd3JhOTE9cUaJTeSa77fsbQUK3pcOpJfM59+VKZaA==}
     engines: {node: '>=12'}
@@ -135,7 +143,7 @@ packages:
     hasBin: true
     dependencies:
       foreground-child: 3.1.1
-      jackspeak: 2.3.3
+      jackspeak: 2.3.6
       minimatch: 9.0.3
       minipass: 6.0.2
       path-scurry: 1.10.1
@@ -160,8 +168,8 @@ packages:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
     dev: true
 
-  /jackspeak@2.3.3:
-    resolution: {integrity: sha512-R2bUw+kVZFS/h1AZqBKrSgDmdmjApzgY0AlCPumopFiAlbUxE2gf+SCuBzQ0cP5hHmUmFYF5yw55T97Th5Kstg==}
+  /jackspeak@2.3.6:
+    resolution: {integrity: sha512-N3yCS/NegsOBokc8GAdM8UcmfsKiSS8cipheD/nivzr700H+nsMOxJjQnvwOcRYVuFkdH0wGUvW2WbXGmrZGbQ==}
     engines: {node: '>=14'}
     dependencies:
       '@isaacs/cliui': 8.0.2
@@ -264,10 +272,12 @@ packages:
       minipass: 6.0.2
     dev: true
 
-  /pyright@1.1.305:
-    resolution: {integrity: sha512-mDLZutboqrfyEXaN8GxJPqUK7KeJlO0/POU/icy8rM56Zl3iHWNeSymBf/zFCiVz1kqNc7yy/RgqxOHX0HHHrw==}
+  /pyright@1.1.329:
+    resolution: {integrity: sha512-5AT98Mi0OYcDiQ5lD1nPJ3cq8gX/HHaXrQ5WjJ/QZkaJtGqnEdrUp5Gq5wBPipWgOnv/l5e50YScaaNDMjoy9Q==}
     engines: {node: '>=12.0.0'}
     hasBin: true
+    optionalDependencies:
+      fsevents: 2.3.3
     dev: true
 
   /run-con@1.2.12:

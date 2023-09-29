@@ -1,6 +1,13 @@
 {
     "author": "",
     "description": "",
+    "devDependencies": {
+        "markdownlint-cli": "^0.35.0",
+        "pyright": "^1.1.329"
+    },
+    "engines": {
+        "npm": "Use pnpm instead of npm!"
+    },
     "license": "",
     "main": "",
     "name": "pyright-exec",
@@ -8,9 +15,5 @@
         "preinstall": "npx only-allow pnpm",
         "pyright": "pyright"
     },
-    "version": "1.0.0",
-    "devDependencies": {
-        "markdownlint-cli": "^0.35.0",
-        "pyright": "^1.1.305"
-    }
+    "version": "1.0.0"
 }
