@@ -14,7 +14,7 @@ python = ">=3.9,<3.11"
 opencv-python = ">=4.7.0.72"
 huggingface-hub = ">=0.14.1"
 numpy = ">=1.24.2"
-torch = "^2.0.1"
+torch = ">=2.1.0"
 onnxruntime = { version = "^1.15.1", optional = true }
 onnxruntime-gpu = { version = "^1.15.1", optional = true }
 
