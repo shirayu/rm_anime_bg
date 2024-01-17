@@ -5,14 +5,10 @@ all: lint_node lint_python
 
 TARGET_DIRS:=./rm_anime_bg
 
-flake8:
-	find $(TARGET_DIRS) | grep '\.py$$' | xargs flake8
-black:
-	find $(TARGET_DIRS) | grep '\.py$$' | xargs black --diff | python ./scripts/check_null.py
-isort:
-	find $(TARGET_DIRS) | grep '\.py$$' | xargs isort --diff | python ./scripts/check_null.py
-pydocstyle:
-	find $(TARGET_DIRS) | grep -v tests | xargs pydocstyle --ignore=D100,D101,D102,D103,D104,D105,D107,D203,D212
+ruff:
+	ruff format --respect-gitignore --check
+	ruff --respect-gitignore
+
 pytest:
 	pytest
 	
@@ -20,7 +16,7 @@ yamllint:
 	find . \( -name node_modules -o -name .venv \) -prune -o -type f -name '*.yml' -print \
 		| xargs yamllint --no-warnings
 
-lint_python: flake8 black isort pydocstyle pytest
+lint_python: ruff pytest
 
 
 pyright:

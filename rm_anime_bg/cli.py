@@ -2,7 +2,7 @@
 
 import argparse
 from pathlib import Path
-from typing import List, Optional
+from typing import Optional
 
 import cv2
 import numpy as np
@@ -52,9 +52,7 @@ def save_image(
     out_format,
 ):
     if path_original.parent == output_dir:
-        raise FileExistsError(
-            f"Output directory should not be the same directory of the input image: {output_dir}"
-        )
+        raise FileExistsError(f"Output directory should not be the same directory of the input image: {output_dir}")
     output_dir.mkdir(
         exist_ok=True,
         parents=True,
@@ -73,7 +71,7 @@ def operation(
     *,
     model_repo_id: str,
     model_filename: str,
-    targets: List[str],
+    targets: list[str],
     output_matted: Optional[Path],
     output_dir: Optional[Path],
     alpha_min: float,

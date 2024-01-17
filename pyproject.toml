@@ -23,24 +23,28 @@ cpu = ["onnxruntime"]
 gpu = ["onnxruntime-gpu"]
 
 [tool.poetry.group.dev.dependencies]
-black = ">=22.12,<24.0"
-isort = "^5.12.0"
-toml = "^0.10.2"
-flake8 = ">=5.0.4"
-pydocstyle = ">=6.1.1"
 pytest = "^7.2.1"
+ruff = "^0.1.13"
+
+[tool.poetry.scripts]
+rm_anime_bg = "rm_anime_bg.cli:main"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
-[tool.poetry.scripts]
-rm_anime_bg = "rm_anime_bg.cli:main"
-
 [tool.pyright]
 pythonVersion = "3.9"
 typeCheckingMode = "basic"
-exclude = [".venv", "**/node_modules", "**/__pycache__",]
+exclude = ["**/third", ".venv", "**/node_modules", "**/__pycache__",]
 reportPrivateImportUsage = "information"
 reportUnusedVariable="warning"
 
+[tool.ruff]
+line-length = 120
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+ignore = []
+fixable = ["ALL"]
