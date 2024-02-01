@@ -632,19 +632,21 @@ sympy = "*"
 
 [[package]]
 name = "onnxruntime-gpu"
-version = "1.16.3"
+version = "1.17.0"
 description = "ONNX Runtime is a runtime accelerator for Machine Learning models"
 optional = true
 python-versions = "*"
 files = [
-    {file = "onnxruntime_gpu-1.16.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:c14bc735ad2b2286be9eadeea09bc190df38e8bce17e37b601761019cc7cc24f"},
-    {file = "onnxruntime_gpu-1.16.3-cp310-cp310-win_amd64.whl", hash = "sha256:8de5ccfc005ea5ec50fbd104b7210c97623a9f8c13de6e64ce559b55956b757f"},
-    {file = "onnxruntime_gpu-1.16.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:5703454521a9c080ff3ac79b5d266e959cc735d442a1d8796763c7f92d6069dc"},
-    {file = "onnxruntime_gpu-1.16.3-cp311-cp311-win_amd64.whl", hash = "sha256:48bb615aed61f5620d1ad46b9005614e1a14de60f8218a1448cc9a643f23d399"},
-    {file = "onnxruntime_gpu-1.16.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:2811c8ea209aaedcc2600ca828025279c1b1242344af603122d28c2ea8ab26a4"},
-    {file = "onnxruntime_gpu-1.16.3-cp38-cp38-win_amd64.whl", hash = "sha256:2e5a92770c9232776739f378804bf6fea20bae02878a50b7fe0f81e77a47ee92"},
-    {file = "onnxruntime_gpu-1.16.3-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:9305c7fc5981d7e04ad2afef1a403475fb84d658898567c91aa5a41c20ead356"},
-    {file = "onnxruntime_gpu-1.16.3-cp39-cp39-win_amd64.whl", hash = "sha256:d3ad8e7fbb22493267c23d61e997a6b2ac6236a08aa6b58a3a91848124c9b037"},
+    {file = "onnxruntime_gpu-1.17.0-cp310-cp310-manylinux_2_28_x86_64.whl", hash = "sha256:1f2a4e0468ac0bd8246996c3d5dbba92cbbaca874bcd7f9cee4e99ce6eb27f5b"},
+    {file = "onnxruntime_gpu-1.17.0-cp310-cp310-win_amd64.whl", hash = "sha256:0721b7930d7abed3730b2335e639e60d94ec411bb4d35a0347cc9c8b52c34540"},
+    {file = "onnxruntime_gpu-1.17.0-cp311-cp311-manylinux_2_28_x86_64.whl", hash = "sha256:be0314afe399943904de7c1ca797cbcc63e6fad60eb85d3df6422f81dd94e79e"},
+    {file = "onnxruntime_gpu-1.17.0-cp311-cp311-win_amd64.whl", hash = "sha256:52125c24b21406d1431e43de1c98cea29c21e0cceba80db530b7e4c9216d86ea"},
+    {file = "onnxruntime_gpu-1.17.0-cp312-cp312-manylinux_2_28_x86_64.whl", hash = "sha256:bb802d8033885c412269f8bc8877d8779b0dc874df6fb9df8b796cba7276ad66"},
+    {file = "onnxruntime_gpu-1.17.0-cp312-cp312-win_amd64.whl", hash = "sha256:8c43533e3e5335eaa78059fb86b849a4faded513a00c1feaaa205ca5af51c40f"},
+    {file = "onnxruntime_gpu-1.17.0-cp38-cp38-manylinux_2_28_x86_64.whl", hash = "sha256:1d461455bba160836d6c11c648c8fd4e4500d5c17096a13e6c2c9d22a4abd436"},
+    {file = "onnxruntime_gpu-1.17.0-cp38-cp38-win_amd64.whl", hash = "sha256:1e4398f2175a92f4b35d95279a6294a89c462f24de058a2736ee1d498bab5a16"},
+    {file = "onnxruntime_gpu-1.17.0-cp39-cp39-manylinux_2_28_x86_64.whl", hash = "sha256:1d0e3805cd1c024aba7f4ae576fd08545fc27530a2aaad2b3c8ac0ee889fbd05"},
+    {file = "onnxruntime_gpu-1.17.0-cp39-cp39-win_amd64.whl", hash = "sha256:fc1da5b93363ee600b5b220b04eeec51ad2c2b3e96f0b7615b16b8a173c88001"},
 ]
 
 [package.dependencies]
@@ -783,6 +785,7 @@ files = [
     {file = "PyYAML-6.0.1-cp311-cp311-win_amd64.whl", hash = "sha256:bf07ee2fef7014951eeb99f56f39c9bb4af143d8aa3c21b1677805985307da34"},
     {file = "PyYAML-6.0.1-cp312-cp312-macosx_10_9_x86_64.whl", hash = "sha256:855fb52b0dc35af121542a76b9a84f8d1cd886ea97c84703eaa6d88e37a2ad28"},
     {file = "PyYAML-6.0.1-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:40df9b996c2b73138957fe23a16a4f0ba614f4c0efce1e9406a184b6d07fa3a9"},
+    {file = "PyYAML-6.0.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:a08c6f0fe150303c1c6b71ebcd7213c2858041a7e01975da3a99aed1e7a378ef"},
     {file = "PyYAML-6.0.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:6c22bec3fbe2524cde73d7ada88f6566758a8f7227bfbf93a408a9d86bcc12a0"},
     {file = "PyYAML-6.0.1-cp312-cp312-musllinux_1_1_x86_64.whl", hash = "sha256:8d4e9c88387b0f5c7d5f281e55304de64cf7f9c0021a3525bd3b1c542da3b0e4"},
     {file = "PyYAML-6.0.1-cp312-cp312-win32.whl", hash = "sha256:d483d2cdf104e7c9fa60c544d92981f12ad66a457afae824d146093b8c294c54"},
