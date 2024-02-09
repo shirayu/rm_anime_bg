@@ -10,7 +10,7 @@ repository = "https://github.com/shirayu/rm_anime_bg.git"
 packages = [{include = "rm_anime_bg"}]
 
 [tool.poetry.dependencies]
-python = ">=3.9,<3.11"
+python = ">=3.9,<3.13"
 opencv-python = ">=4.7.0.72"
 huggingface-hub = ">=0.14.1"
 numpy = ">=1.24.2"
