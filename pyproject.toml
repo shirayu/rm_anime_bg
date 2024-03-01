@@ -23,8 +23,8 @@ cpu = ["onnxruntime"]
 gpu = ["onnxruntime-gpu"]
 
 [tool.poetry.group.dev.dependencies]
-pytest = "^8.0.0"
-ruff = "^0.2.1"
+pytest = ">=8.0.0"
+ruff = ">=0.2.1"
 
 [tool.poetry.scripts]
 rm_anime_bg = "rm_anime_bg.cli:main"

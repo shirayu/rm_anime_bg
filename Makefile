@@ -7,7 +7,7 @@ TARGET_DIRS:=./rm_anime_bg
 
 ruff:
 	ruff format --respect-gitignore --check
-	ruff --respect-gitignore
+	ruff check --respect-gitignore
 
 pytest:
 	pytest
