@@ -9,8 +9,8 @@ devDependencies:
     specifier: ^0.39.0
     version: 0.39.0
   pyright:
-    specifier: ^1.1.353
-    version: 1.1.353
+    specifier: ^1.1.356
+    version: 1.1.356
 
 packages:
 
@@ -137,16 +137,16 @@ packages:
     engines: {node: '>=12'}
     dev: true
 
-  /glob@10.3.10:
-    resolution: {integrity: sha512-fa46+tv1Ak0UPK1TOy/pZrIybNNt4HCv7SDzwyfiOZkvZLEbjsZkJBPtDHVshZjbecAoAGSC20MjLDG/qr679g==}
+  /glob@10.3.12:
+    resolution: {integrity: sha512-TCNv8vJ+xz4QiqTpfOJA7HvYv+tNIRHKfUWw/q+v2jdgN4ebz+KY9tGx5J4rHP0o84mNP+ApH66HRX8us3Khqg==}
     engines: {node: '>=16 || 14 >=14.17'}
     hasBin: true
     dependencies:
       foreground-child: 3.1.1
       jackspeak: 2.3.6
-      minimatch: 9.0.3
+      minimatch: 9.0.4
       minipass: 7.0.4
-      path-scurry: 1.10.1
+      path-scurry: 1.10.2
     dev: true
 
   /ignore@5.3.1:
@@ -218,12 +218,12 @@ packages:
     dependencies:
       commander: 11.1.0
       get-stdin: 9.0.0
-      glob: 10.3.10
+      glob: 10.3.12
       ignore: 5.3.1
       js-yaml: 4.1.0
       jsonc-parser: 3.2.1
       markdownlint: 0.33.0
-      minimatch: 9.0.3
+      minimatch: 9.0.4
       run-con: 1.3.2
     dev: true
 
@@ -244,8 +244,8 @@ packages:
     resolution: {integrity: sha512-Lf+9+2r+Tdp5wXDXC4PcIBjTDtq4UKjCPMQhKIuzpJNW0b96kVqSwW0bT7FhRSfmAiFYgP+SCRvdrDozfh0U5w==}
     dev: true
 
-  /minimatch@9.0.3:
-    resolution: {integrity: sha512-RHiac9mvaRw0x3AYRgDC1CxAP7HTcNrrECeA8YYJeWnpo+2Q5CegtZjaotWTWxDG3UeGA1coE05iH1mPjT/2mg==}
+  /minimatch@9.0.4:
+    resolution: {integrity: sha512-KqWh+VchfxcMNRAJjj2tnsSJdNbHsVgnkBhTNrW7AjVo6OvLtxw8zfT9oLw1JSohlFzJ8jCoTgaoXvJ+kHt6fw==}
     engines: {node: '>=16 || 14 >=14.17'}
     dependencies:
       brace-expansion: 2.0.1
@@ -265,8 +265,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /path-scurry@1.10.1:
-    resolution: {integrity: sha512-MkhCqzzBEpPvxxQ71Md0b1Kk51W01lrYvlMzSUaIzNsODdd7mqhiimSZlr+VegAz5Z6Vzt9Xg2ttE//XBhH3EQ==}
+  /path-scurry@1.10.2:
+    resolution: {integrity: sha512-7xTavNy5RQXnsjANvVvMkEjvloOinkAjv/Z6Ildz9v2RinZ4SBKTWFOVRbaF8p0vpHnyjV/UwNDdKuUv6M5qcA==}
     engines: {node: '>=16 || 14 >=14.17'}
     dependencies:
       lru-cache: 10.2.0
@@ -278,8 +278,8 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /pyright@1.1.353:
-    resolution: {integrity: sha512-3RHDXn9SzNlIwPRZksD8IsvoTziObbzxxR2vh8QIGZMwG+qygU7npQBdQIT//mOou8GIhHmvulKkAtHg7mFlxw==}
+  /pyright@1.1.356:
+    resolution: {integrity: sha512-D+VaASD6+G+x0b8bPhs9RELnZKevt8DozmjplMI1zdjuAwjPLGt84QukoEE2oSKD6Yl2fJVUB3b2R+k2WKRPeA==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     optionalDependencies:
