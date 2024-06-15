@@ -12,8 +12,8 @@ importers:
         specifier: ^0.41.0
         version: 0.41.0
       pyright:
-        specifier: ^1.1.365
-        version: 1.1.365
+        specifier: ^1.1.367
+        version: 1.1.367
 
 packages:
 
@@ -82,8 +82,8 @@ packages:
     resolution: {integrity: sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==}
     engines: {node: '>=0.12'}
 
-  foreground-child@3.1.1:
-    resolution: {integrity: sha512-TMKDUnIte6bfb5nWv7V/caI169OHgvwjb7V4WkeUvbQQdjr5rWKqHFiKWb/fcOwB+CzBT+qbWjvj+DVwRskpIg==}
+  foreground-child@3.2.1:
+    resolution: {integrity: sha512-PXUUyLqrR2XCWICfv6ukppP96sdFwWbNEnfEMt7jNsISjMsvaLNinAHNDYyvkyU+SZG2BTSbT5NjG+vZslfGTA==}
     engines: {node: '>=14'}
 
   fsevents@2.3.3:
@@ -115,8 +115,8 @@ packages:
   isexe@2.0.0:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
 
-  jackspeak@3.1.2:
-    resolution: {integrity: sha512-kWmLKn2tRtfYMF/BakihVVRzBKOxz4gJMiL2Rj91WnAB5TPZumSH99R/Yf1qE1u4uRimvCSJfm6hnxohXeEXjQ==}
+  jackspeak@3.4.0:
+    resolution: {integrity: sha512-JVYhQnN59LVPFCEcVa2C3CrEKYacvjRfqIQl+h8oi91aLYQVWRYbxjPcv1bUiUy/kLmQaANrYfNMCO3kuEDHfw==}
     engines: {node: '>=14'}
 
   js-yaml@4.1.0:
@@ -180,8 +180,8 @@ packages:
     resolution: {integrity: sha512-uxFIHU0YlHYhDQtV4R9J6a52SLx28BCjT+4ieh7IGbgwVJWO+km431c4yRlREUAsAmt/uMjQUyQHNEPf0M39CA==}
     engines: {node: '>=6'}
 
-  pyright@1.1.365:
-    resolution: {integrity: sha512-A5RHXB782m2wCeazfrPGSvFUd1WAjpHrD83M/Umc/tcAhyC5pzhrh23US1yv9DH/GMilQeWdJ4W8pGxmgej4DQ==}
+  pyright@1.1.367:
+    resolution: {integrity: sha512-qw6PmU59P4OAonqPEsaJ4CYHIpkr3eBsyXRpVJnmBoXldEZEoM3qdXIeo9BlsPFE+hzdNKNgBjSNAXdiOixEuw==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -297,7 +297,7 @@ snapshots:
 
   entities@4.5.0: {}
 
-  foreground-child@3.1.1:
+  foreground-child@3.2.1:
     dependencies:
       cross-spawn: 7.0.3
       signal-exit: 4.1.0
@@ -309,8 +309,8 @@ snapshots:
 
   glob@10.4.1:
     dependencies:
-      foreground-child: 3.1.1
-      jackspeak: 3.1.2
+      foreground-child: 3.2.1
+      jackspeak: 3.4.0
       minimatch: 9.0.4
       minipass: 7.1.2
       path-scurry: 1.11.1
@@ -323,7 +323,7 @@ snapshots:
 
   isexe@2.0.0: {}
 
-  jackspeak@3.1.2:
+  jackspeak@3.4.0:
     dependencies:
       '@isaacs/cliui': 8.0.2
     optionalDependencies:
@@ -392,7 +392,7 @@ snapshots:
 
   punycode.js@2.3.1: {}
 
-  pyright@1.1.365:
+  pyright@1.1.367:
     optionalDependencies:
       fsevents: 2.3.3
 
